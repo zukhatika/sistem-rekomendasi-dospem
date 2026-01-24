@@ -1,0 +1,21 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3>Edit Dosen</h3>
+
+<form method="POST" class="mt-3">
+    <div class="mb-3">
+        <label class="form-label">Nama Dosen</label>
+        <input type="text" name="nama" class="form-control" value="{{ data['nama_dosen'] }}" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Keahlian</label>
+        <input type="text" name="keahlian" class="form-control" value="{{ data['keahlian'] }}" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="/kelola-dosen" class="btn btn-secondary">Batal</a>
+</form>
+
+{% endblock %}

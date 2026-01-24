@@ -1,0 +1,18 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3 class="mb-3 text-center">Tambah Dosen</h3>
+
+<form method="POST" class="card shadow p-4 mx-auto" style="max-width:600px;">
+    <div class="mb-3">
+        <label class="form-label">Nama Dosen</label>
+        <input type="text" name="nama" class="form-control" required placeholder="Masukkan nama dosen">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Keahlian</label>
+        <input type="text" name="keahlian" class="form-control" required placeholder="Masukkan keahlian dosen">
+    </div>
+    <button class="btn btn-success w-100">Simpan</button>
+</form>
+
+{% endblock %}

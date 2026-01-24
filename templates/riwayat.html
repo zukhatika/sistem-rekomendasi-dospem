@@ -1,0 +1,40 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3 class="mb-3">Riwayat Rekomendasi</h3>
+<a href="/tambah-riwayat" class="btn btn-success btn-sm mb-3">+ Tambah Riwayat</a>
+
+<style>
+    .judul-col {
+        min-width: 300px;
+        white-space: nowrap;
+    }
+</style>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle">
+        <thead class="table-dark">
+            <tr class="text-center">
+                <th>No</th>
+                <th class="judul-col">Judul Skripsi</th>
+                <th>Dosen Pembimbing</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td class="text-center">{{ loop.index }}</td>
+                <td class="judul-col">{{ row.judul }}</td>
+                <td class="text-center">{{ row.dosen }}</td>
+                <td class="text-center">
+                    <a href="/edit-riwayat/{{ loop.index0 }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/hapus-riwayat/{{ loop.index0 }}" class="btn btn-danger btn-sm">Hapus</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3 class="mb-3 text-center">Edit Riwayat</h3>
+
+<form method="POST" class="card shadow p-4 mx-auto" style="max-width:600px;">
+    <div class="mb-3">
+        <label class="form-label">Judul Skripsi</label>
+        <textarea name="judul" class="form-control" rows="4" required>{{ data['judul'] }}</textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Dosen Pembimbing</label>
+        <input type="text" name="dosen" class="form-control" value="{{ data['dosen'] }}" required>
+    </div>
+    <button class="btn btn-primary w-100">Update</button>
+</form>
+
+{% endblock %}

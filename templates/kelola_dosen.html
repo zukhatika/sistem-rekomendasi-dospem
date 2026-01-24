@@ -1,0 +1,33 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<h3 class="mb-3">Kelola Dosen</h3>
+<a href="/tambah-dosen" class="btn btn-primary btn-sm mb-3">+ Tambah Dosen</a>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle">
+        <thead class="table-dark">
+            <tr class="text-center">
+                <th>No</th>
+                <th>Nama Dosen</th>
+                <th>Keahlian</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for row in data %}
+            <tr>
+                <td class="text-center">{{ loop.index }}</td>
+                <td>{{ row.nama_dosen }}</td>
+                <td>{{ row.keahlian }}</td>
+                <td class="text-center">
+                    <a href="/edit-dosen/{{ row.nama_dosen }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/hapus-dosen/{{ row.nama_dosen }}" class="btn btn-danger btn-sm">Hapus</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

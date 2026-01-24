@@ -1,0 +1,51 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h2 class="fw-bold text-dark">Dashboard Admin</h2>
+        </div>
+    </div>
+
+    <div class="row g-3">
+
+        <!-- Card Kelola Dosen -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kelola Dosen</h5>
+                    <p class="text-muted">Manajemen data dosen pembimbing</p>
+                    <a href="/kelola-dosen" class="btn btn-primary w-100">Masuk</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Riwayat -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Riwayat Rekomendasi</h5>
+                    <p class="text-muted">Riwayat hasil rekomendasi mahasiswa</p>
+                    <a href="/riwayat" class="btn btn-success w-100">Lihat Riwayat</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Logout -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Keluar Sistem</h5>
+                    <p class="text-muted">Logout dari akun admin</p>
+                    <a href="/logout-confirm" class="btn btn-danger w-100">Logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
